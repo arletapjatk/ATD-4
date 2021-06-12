@@ -1,0 +1,2 @@
+MATCH (airport:Airport)-[:ORIGIN|:DESTINATION]-(flight:Flight)
+return distinct flight.airline, count(distinct airport.name) ORDER BY count(distinct airport.name) DESC
